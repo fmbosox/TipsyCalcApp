@@ -50,10 +50,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-B8-XvN">
-                                <rect key="frame" x="30" y="90" width="315" height="267"/>
+                                <rect key="frame" x="30" y="90" width="315" height="280"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Amount Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OY5-No-mne">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="ghz-tA-7g5"/>
                                         </constraints>
@@ -65,10 +65,10 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikh-Vc-Wt4">
-                                        <rect key="frame" x="0.0" y="90" width="315" height="77"/>
+                                        <rect key="frame" x="0.0" y="50" width="315" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-4T-6SH">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="77"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="cpR-Qd-D9n"/>
                                                 </constraints>
@@ -77,7 +77,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.050000000000000003" maxValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-aD-Zxq">
-                                                <rect key="frame" x="68" y="0.0" width="249" height="78"/>
+                                                <rect key="frame" x="68" y="0.0" width="249" height="31"/>
                                                 <color key="tintColor" red="0.4823529411764706" green="0.88627450980392153" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="tipPercentageDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bwi-py-k2P"/>
@@ -86,7 +86,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jVk-kb-yDa">
-                                        <rect key="frame" x="0.0" y="187" width="315" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="315" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tipIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tzJ-HB-EKM">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -115,7 +115,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eiR-N5-0YM">
-                                        <rect key="frame" x="0.0" y="237" width="315" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="315" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-Sz-Fn8">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -143,6 +143,55 @@
                                             <constraint firstAttribute="height" constant="30" id="igO-jV-qAp"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5J5-Xf-ZmG">
+                                        <rect key="frame" x="0.0" y="200" width="315" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bL-NJ-KrC">
+                                                <rect key="frame" x="0.0" y="0.0" width="211" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="DRi-3X-9jI">
+                                                <rect key="frame" x="221" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="splitBillChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="HJ7-WE-bzW"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jf4-WP-gZQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-GN-3qB">
+                                        <rect key="frame" x="0.0" y="250" width="315" height="30"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LE6-0Z-zWH">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="IND-D8-P94"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU PAY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-3E-eSL">
+                                                <rect key="frame" x="70" y="0.0" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="vvh-6s-7Gi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.4823529412" green="0.8862745098" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38I-CJ-6FU">
+                                                <rect key="frame" x="155" y="0.0" width="160" height="30"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HnF-xj-6lC"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -159,11 +208,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="splitLabel" destination="2bL-NJ-KrC" id="iuu-wt-G3c"/>
+                        <outlet property="splitStepper" destination="DRi-3X-9jI" id="s9a-AV-O0n"/>
                         <outlet property="textField" destination="OY5-No-mne" id="FoT-iA-8Lh"/>
                         <outlet property="tipLabel" destination="trF-qG-Eep" id="nwa-oL-uht"/>
                         <outlet property="tipPercentageLabel" destination="wbd-4T-6SH" id="rJO-FO-KwQ"/>
                         <outlet property="tipPercentageSlider" destination="taQ-aD-Zxq" id="M2Q-iW-tG7"/>
                         <outlet property="totalLabel" destination="3gd-lL-2zn" id="rxa-Gd-fVz"/>
+                        <outlet property="youPayLabel" destination="38I-CJ-6FU" id="oEa-KW-H2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

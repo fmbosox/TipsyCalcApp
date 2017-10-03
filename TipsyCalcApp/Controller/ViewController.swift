@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalLabel: UILabel!
     
+    @IBOutlet weak var splitLabel: UILabel!
+    
+    @IBOutlet weak var splitStepper: UIStepper!
+    
+    @IBOutlet weak var youPayLabel: UILabel!
+    
     var tip = tipModel(billAmount: 0.0, tipPercent: 0.0)
     
     
@@ -39,6 +45,9 @@ class ViewController: UIViewController {
         tipLabel.text = String (format: "$%0.2f", tip.tipAmount)
         totalLabel.text = String (format: "$%0.2f", tip.totalAmount)
         tipPercentageLabel.text = "Tip: \(Int(tipPercentageSlider.value * 100))%"
+        splitLabel.text = "\(Int(splitStepper.value)) - Way Split"
+        youPayLabel.text = String (format: "$%0.2f", tip.spliTotalAmount)
+        
     }
 
     
@@ -55,5 +64,13 @@ class ViewController: UIViewController {
         setTipCalculationValues()
         updateUI()
     }
+    
+    @IBAction func splitBillChanger(_ sender: UIStepper) {
+        print(splitStepper.value)
+        tip.totalBillPayers = splitStepper.value
+        tip.calculateTip()
+        updateUI()
+    }
+    
 }
 

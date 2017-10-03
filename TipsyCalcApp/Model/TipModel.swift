@@ -11,8 +11,10 @@ import Foundation
 class tipModel {
     private var _billAmount: Double = 0
     private var _tipPercent: Double = 0
+    private var _totalBillPayers: Double = 1.0
     private var _tipAmount: Double = 0
     private var _totalAmount: Double = 0
+    private var _splitTotalAmount: Double = 0
     
     var billAmount: Double {
         get {
@@ -31,12 +33,25 @@ class tipModel {
         }
     }
     
+    var totalBillPayers: Double {
+        get{
+            return _totalBillPayers
+        }
+        set{
+            _totalBillPayers = newValue
+        }
+    }
+    
     var tipAmount: Double{
         return _tipAmount
     }
     
     var totalAmount: Double {
         return _totalAmount
+    }
+    
+    var spliTotalAmount: Double {
+        return _splitTotalAmount
     }
     
     init(billAmount: Double,tipPercent: Double) {
@@ -47,6 +62,7 @@ class tipModel {
     func calculateTip(){
         _tipAmount = billAmount * tipPercent
         _totalAmount = tipAmount + billAmount
+        _splitTotalAmount = totalAmount/totalBillPayers
     }
     
     
